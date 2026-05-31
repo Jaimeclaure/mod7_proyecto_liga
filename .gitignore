@@ -1,0 +1,25 @@
+################
+# Variables de entorno
+################
+.env
+
+################
+# Datos generados
+################
+
+data/raw/
+*.parquet
+*.ipynb
+
+################
+# Cache Python
+################
+
+__pycache__/
+*.pyc
+
+################
+# VS Code
+################
+
+.vscode/

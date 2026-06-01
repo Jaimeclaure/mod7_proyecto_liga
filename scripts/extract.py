@@ -11,7 +11,7 @@ from utils import setup_logger
 
 logger = setup_logger()
 
-def extract_datasets(temp_dir: str = "/tmp/football_data") -> List[Tuple[str, str]]:
+def extract_datasets(temp_dir: str = "football_data") -> List[Tuple[str, str]]:
     """
     Extrae partidos y posiciones desde api.football-data.org.
     Retorna una lista de tuplas (nombre_tabla, ruta_archivo_local).

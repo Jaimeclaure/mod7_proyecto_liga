@@ -37,6 +37,8 @@ jobs:
 
     # 5. Ejecutar la Extracción de Datos
     - name: Run Extract Script
+      env:
+        FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
       run: |
         python -m scripts.extract
 

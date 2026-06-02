@@ -44,5 +44,7 @@ jobs:
 
     # 6. Ejecutar la Carga a Google Cloud Storage
     - name: Run Load Script
+      env:
+        GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
       run: |
         python -m scripts.load

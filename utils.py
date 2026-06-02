@@ -44,7 +44,8 @@ def to_parquet(df: pd.DataFrame, path: Path) -> None:
 # La función gcs_client crea un cliente autenticado para Google Cloud Storage utilizando las credenciales proporcionadas en el archivo .env.
 def gcs_client() -> storage.Client:
 	if not GCP_SA_KEY:
-		raise ValueError("No se encontró GCP_SA_KEY en el archivo .env")
+		raise ValueError("No se encontró GCP_SA_KEY en las variables de entorno")
+	
 	credentials_info = json.loads(GCP_SA_KEY)
 	credentials = service_account.Credentials.from_service_account_info(credentials_info)
 	return storage.Client(project=credentials_info["project_id"], credentials=credentials)

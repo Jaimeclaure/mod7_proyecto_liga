@@ -13,7 +13,7 @@ from google.oauth2 import service_account
 ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT / ".env")
 RAW_DIR = ROOT / "data" / "raw"
-GCS_BUCKET = "f1-analisis"
+GCS_BUCKET = "analisis_liga"
 RAW_PREFIX = "raw"
 GCP_SA_KEY = os.getenv("GCP_SA_KEY")
 
